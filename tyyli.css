@@ -1,0 +1,200 @@
+:root {
+    --primary-color: #8b4a1f;
+    --background-color: rgb(255, 247, 235);
+    --text-color: black;
+    --card-color: white;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: "Forum", serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+H1 {
+    color: #fff3e6;
+    font-size: 2.5rem;
+    letter-spacing: 0.06em;
+}
+
+H2 {
+    color: #9c5a2e;
+    font-size: 2rem;
+    letter-spacing: 0.03em;
+}
+
+p {
+    font-size: 1.4rem;
+    margin: 10px auto;
+    max-width: 700px;
+}
+
+.valinnat {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.valinnat li {
+    margin: 6px 0;
+    font-size: 1.7rem;
+
+}
+
+p.valinnat {
+    margin-bottom: 15px;
+}
+
+ul.valinnat {
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+}
+
+.logo {
+    width: 280px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.active {
+    border-bottom: 1.5px solid white;
+    font-weight: bold;
+}
+
+.tuotteet {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.tuotekuva {
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+}
+
+.tuotekuva:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+.tuote {
+    background: var(--card-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sivukuva {
+    width: 600px;
+    max-width: 90%;
+    margin: 20px auto;
+    display: block;
+}
+
+.somet {
+    list-style: none;
+    padding: 0;
+}
+
+.somet a {
+    text-decoration: none;
+    color: black;
+}
+
+.somet a:hover {
+    text-decoration: underline;
+}
+
+.musiikki {
+    font-style: italic;
+    margin: 4px auto;
+    font-size: 1.6em;
+    max-width: 700px;
+}
+
+#kartta {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 20px auto;
+    display: block;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #fff3e6;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* MOBIILI */
+
+@media only screen and (max-width:430px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+}
+
+/* TABLET */
+
+@media only screen and (min-width:431px) {
+
+    .tuotteet {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width:1200px) {
+
+    .tuotteet {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    body {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+}
